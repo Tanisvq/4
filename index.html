@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Career Guide Pro - MVP</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: #000; 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px; 
+            color: #fff; 
+        }
+        .container { 
+            background: rgba(255, 107, 107, 0.15); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 107, 107, 0.3); 
+            border-radius: 20px; 
+            padding: 40px; 
+            max-width: 500px; 
+            text-align: center; 
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2); 
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; color: #ff6b6b; }
+        p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.95; }
+        select { 
+            background: rgba(255, 107, 107, 0.2); 
+            border: 1px solid rgba(255, 107, 107, 0.4); 
+            color: #fff; 
+            padding: 15px; 
+            border-radius: 10px; 
+            font-size: 1.1em; 
+            width: 100%; 
+            margin-bottom: 20px; 
+        }
+        select option { background: #333; color: #fff; }
+        .btn { 
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53); 
+            color: white; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 50px; 
+            font-size: 1.1em; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            width: 100%; 
+        }
+        .btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4); 
+        }
+        .features { 
+            display: flex; 
+            justify-content: space-around; 
+            margin: 30px 0; 
+            flex-wrap: wrap; 
+        }
+        .feature { 
+            background: rgba(255, 107, 107, 0.2); 
+            border: 1px solid rgba(255, 107, 107, 0.3); 
+            padding: 10px 15px; 
+            border-radius: 10px; 
+            margin: 5px; 
+            font-size: 0.9em; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 College Career Guide</h1>
+        <p>Year-by-year roadmap + lessons for Web Dev, Data Science & more</p>
+        
+        <div class="features">
+            <div class="feature">📱 Mobile Ready</div>
+            <div class="feature">🎯 Personalized</div>
+            <div class="feature">💯 Free Resources</div>
+        </div>
+        
+        <select id="yearSelect">
+            <option value="year1">📚 Year 1 - Foundations</option>
+            <option value="year2">⚡ Year 2 - Core Skills</option>
+            <option value="year3">🎓 Year 3 - Job Ready</option>
+        </select>
+        
+        <button class="btn" onclick="startJourney()">Start My Journey →</button>
+        
+        <p style="margin-top: 20px; font-size: 0.8em; opacity: 0.7;">Made for Indian colleges | Beta</p>
+    </div>
+    
+    <script>
+        function startJourney() {
+            const year = document.getElementById('yearSelect').value;
+            localStorage.setItem('userYear', year);
+            document.querySelector('.container').style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                window.location.href = 'fields.html';
+            }, 300);
+        }
+        
+        const savedYear = localStorage.getItem('userYear');
+        if (savedYear) {
+            document.getElementById('yearSelect').value = savedYear;
+        }
+    </script>
+</body>
+</html>[code_file:3]
