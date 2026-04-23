@@ -1,0 +1,175 @@
+/* ===============================
+   GLOBAL RESPONSIVE SYSTEM
+================================*/
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Typography scaling */
+h1 {
+  font-size: clamp(32px, 6vw, 72px);
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 40px);
+}
+
+p {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+/* ===============================
+   NAVBAR
+================================*/
+.nav {
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+/* ===============================
+   HERO
+================================*/
+.hero {
+  padding: 60px 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  width: 100%;
+  max-width: 280px;
+}
+
+/* ===============================
+   STATS
+================================*/
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   TERMINAL
+================================*/
+.terminal-section {
+  padding: 60px 20px;
+}
+
+.terminal-box {
+  width: 100%;
+}
+
+.terminal-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.t-card {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* ===============================
+   PLACED LOGOS
+================================*/
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ===============================
+   METHOD GRID
+================================*/
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   TRACKS GRID
+================================*/
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .track-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   CTA
+================================*/
+.final-cta {
+  padding: 80px 20px;
+}
+
+.cta-btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+/* ===============================
+   EXTRA POLISH (IMPORTANT)
+================================*/
+
+/* Better spacing on mobile */
+section {
+  margin-bottom: 40px;
+}
+
+/* Prevent overflow bugs */
+body {
+  overflow-x: hidden;
+}
+
+/* Improve touch targets */
+button {
+  min-height: 48px;
+}
